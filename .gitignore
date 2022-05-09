@@ -18,14 +18,9 @@ npm-debug.log*
 # Dependency directories
 node_modules/
 
-# TypeScript cache
-*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
-
-# Build results
-dist

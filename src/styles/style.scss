@@ -1,0 +1,98 @@
+$color: rgb(125, 235, 22);
+
+body {
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 40px 0;
+}
+
+.keyboard-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.keyboard-textarea {
+  resize: none;
+  min-height: 180px;
+  width: 87%;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 20px;
+  outline: #92909b;
+  &:focus {
+    box-shadow: 7px 9px 4px -6px rgb(34 60 80 / 46%);
+  }
+}
+.keyboard {
+  min-height: 220px;
+  width: 87%;
+  background-color: #c0bfc4;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+}
+.keyboard-row {
+  width: 100%;
+  height: 35px;
+  border: 1px solid rgb(89, 20, 201);
+}
+
+.k-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #f5f4f9;
+  border: 1px solid #76757a;
+  box-shadow: 9px 10px 4px -6px rgba(34, 60, 80, 0.46);
+  border-radius: 5px;
+  padding: 0 3px;
+  margin: 2px;
+  &.active {
+    box-shadow: 3px 8px 16px 3px #d5d3d9 inset;
+    transform: scale(0.9);
+  }
+  &.Backspace {
+    width: 95px;
+  }
+  &.Tab {
+    width: 60px;
+  }
+  &.NumpadDecimal {
+    width: 75px;
+  }
+  &.CapsLock {
+    width: 85px;
+  }
+  &.Enter {
+    width: 50px;
+  }
+  &.ShiftLeft {
+    width: 105px;
+  }
+  &.ShiftRight {
+    width: 82px;
+  }
+  &.Space {
+    flex: 1;
+  }
+}
