@@ -1,8 +1,6 @@
 import { keys } from './key';
-import { ln } from './ln';
 import '../styles/style.scss';
 
-// console.log('I get called from print.js!');
 const body = document.querySelector('body');
 
 let keyboardFild = class Keyboard {
@@ -53,7 +51,6 @@ let keyboardFild = class Keyboard {
             out += `<div class="k-key ${keys[i].code}" data='${keys[i].code}'>${keys[i].keyRu}</div>`;
           }
           document.querySelector('#keyboard').innerHTML = out;
-          console.log('нажаты');
         }
       }
 
@@ -76,10 +73,9 @@ let keyboardFild = class Keyboard {
     });
 
     document.querySelectorAll('.k-key').forEach((item) => {
-      console.log(item);
       item.addEventListener('click', (e) => {
         document.querySelector('#textarea').focus();
-        console.log(pressed.size);
+
         item.classList.add('active');
         let atr = e.target.getAttribute('data');
         keys.map((el) => {
@@ -134,5 +130,3 @@ let keyboardFild = class Keyboard {
 
 new keyboardFild().createContainer();
 new keyboardFild().createKeys();
-// let createKeyboard = new CreateKeyboard();
-// createKeyboard.createElement();
